@@ -1,0 +1,62 @@
+@import '_variables.scss';
+
+.hero {
+  margin-bottom: 50px;
+  
+  &__foto {
+    padding: 158px 70px;
+    background-image: url("../img/hero__default-foto.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    text-align: left;
+    margin-bottom: 60px;
+    max-width: 709px;
+  }
+
+  &__link {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    padding: 18px 28px;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 600;
+    color: $white;
+    background-color: $cherry;
+    cursor: pointer;
+    transition: background-color .3s;
+  }
+
+  &__link:hover {
+    background-color: $red;
+  }
+
+  &__link:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    margin-bottom: 30px;
+  
+    &__foto {
+      padding: 40px 5px;
+      padding-bottom: 96px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      max-width: 709px;
+    }
+  
+    &__link {
+      padding: 6.5px 25.5px;
+      font-size: 16px;
+      line-height: 19.5px;
+    }
+  }
+}

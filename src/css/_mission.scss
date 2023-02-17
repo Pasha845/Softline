@@ -1,0 +1,58 @@
+@import '_variables.scss';
+
+.mission {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+  &__div {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 140px;
+    padding-bottom: 140px;
+    background-color: $dark-cherry;
+    picture {
+      position: absolute;
+      z-index: 5;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $white;
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+    max-width: 1110px;
+    font-size: 32px;
+    line-height: 48px;
+    color: $white;
+  }
+}
+
+.last-photo {
+  right: 0;
+}
+
+@media (max-width: 576px) {
+  .mission {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    
+    &__div {
+      padding: 32px 5px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+
+    &__text {
+      width: 100%;
+      font-size: 16px;
+      line-height: 20.8px;
+    }
+  }
+}

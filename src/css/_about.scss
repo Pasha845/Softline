@@ -1,0 +1,41 @@
+@import '_variables.scss';
+
+.about {
+  justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__div {
+    padding: 99px 110px;
+    max-width: 1110px;
+    box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.08);
+  }
+
+  &__text {
+    text-align: center;
+    margin: 0;
+    font-size: 32px;
+    line-height: 38.4px;
+    font-weight: 600;
+    span {
+      color: $cherry;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding-top: 30px;
+    padding-bottom: 25px;
+
+    &__div {
+      margin: 0;
+      padding: 25px 5px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 19.2px;
+    }
+  }
+}

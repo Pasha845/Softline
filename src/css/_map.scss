@@ -1,0 +1,171 @@
+@import '_variables.scss';
+
+.map {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &__container {
+    position: relative;
+  }
+
+  &__div {
+    justify-content: space-between;
+    padding: 30px 70px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
+  }
+
+  &__item {
+    position: relative;
+    width: 300px;
+    margin-right: 120px;
+    color: inherit;
+  }
+
+  &__item-btn {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    border: none;
+    width: 300px;
+    padding: 19px 30px;
+    font-weight: 400;
+    background: none;
+    transition: border 0.2s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__item-btn:focus {
+    outline: none;
+  }
+
+  &__item-btn::after {
+    content: "";
+    display: inline-block;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    width: 8px;
+    height: 8px;
+    transform: translate(145px, calc(-50% + 4px)) rotate(45deg);
+    -webkit-transition: -webkit-transform 0.2s ease;
+    transition: -webkit-transform 0.2s ease;
+    -o-transition: transform 0.2s ease;
+    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
+    transform-origin: center;
+  }
+
+  &__item-btn.is-active::after {
+    transform: translate(145px, 3px) rotate(-135deg);
+  }
+
+  &__dropdown {
+    display: none;
+    width: 300px;
+    padding-top: 21px;
+    padding-bottom: 23px;
+    padding-left: 28px;
+    padding-right: 100px;
+    background-color: $white;
+  }
+
+  &__drop-list {
+    width: 300px;
+  }
+
+  &__dropdown.is-active {
+    position: absolute;
+    z-index: 4;
+  }
+
+  &__dropdown.is-active {
+    display: block;
+    animation-name: dropdownOpen;
+    animation-duration: 0.4s;
+  }
+
+  &__dropdown.is-disabled {
+    display: block;
+    animation-name: dropdownClose;
+    animation-duration: 0.4s;
+  }
+
+  &__drop-list {
+    list-style: none;
+    padding-left: 0;
+    width: 300px;
+    column-count: 2;
+  }
+
+  &__dropdown-item:not(:last-child) {
+    margin-bottom: 11px;
+  }
+
+  &__item-link {
+    position: relative;
+    flex-shrink: 0;
+    display: block;
+    font-size: 16px;
+    line-height: 20.8px;
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    background-repeat: no-repeat;
+    transition: border-color .3s ease;
+  }
+
+  &__item-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+
+  &__item-text {
+    position: relative;
+  }
+
+  &__link-margin:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link {
+    padding-bottom: 27px;
+    border-bottom: 3px solid transparent;
+    transition: border-color .3s;
+  }
+
+  &__link:hover {
+    color: $dark-cherry;
+  }
+
+  &__link:focus {
+    border-color: $dark-cherry;
+    outline: none;
+  }
+
+  &__content {
+    position: absolute;
+    z-index: 5;
+    display: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  &__content-active {
+    display: block;
+  }
+
+  &__photo-1 {
+    background-image: url("../img/map__default-all.png");
+  }
+
+  &__photo-2 {
+    background-image: url("../img/map__default-moscow.png");
+  }
+}
