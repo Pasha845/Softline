@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width">
-  <meta name="description" content="">
+  <meta name="description" content="Главная страница включает выпадающее окно с городами, табы для переключения на карте,
+    открытие дополнительных блоков при нажатии на них и слайдер на Swiper.js">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная</title>
   <link rel="stylesheet" href="//unpkg.com/swiper/swiper-bundle.min.css">
@@ -60,7 +61,7 @@
       <div class="container">
         <ul class="numbers__list flex list-reset">
           <li class="numbers__item">
-            <p class="numbers__text">> 30 лет</p>
+            <p class="numbers__text">>30 лет</p>
             <p class="numbers__subtext">на IT-рынке</p>
           </li>
           <li class="numbers__item">
@@ -87,15 +88,22 @@
 
     <section class="map">
       <div class="map__container container">
-        <div class="flex">
+        <div class="map__list flex">
           <div class="map__item">
             <button class="map__item-btn js-dropdown-btn" type="button" data-path="one">
               <span class="map__item-text">Офисы Softline</span>
             </button>
             <div class="map__dropdown js-drop" data-target="one">
               <div class="map__dropdown-wrap">
-                <ul class="map__drop-list list-reset">
+                <ul class="map__drop-list flex list-reset">
                   <li class="map__dropdown-item"><a class="map__item-link" href="#">Москва</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Центр Воронеж Ярославль Белгород</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Северо-Запад Санкт-Петербург Калининград</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Юг Ростов-на-Дону Краснодар Волгоград</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Волга Казань Самара Уфа Оренбург Нижний Новгород</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Урал Екатеринбург Челябинск Пермь Сургут Тюмень Ижевск</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Сибирь Новосибирск Омск Томск Красноярск Иркутск</a></li>
+                  <li class="map__dropdown-item"><a class="map__item-link" href="#">Дальний Восток Хабаровск Владивосток</a></li>
                 </ul>
               </div>
             </div>

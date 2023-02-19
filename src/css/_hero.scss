@@ -35,7 +35,12 @@
   }
 
   &__link:focus {
+    background-color: $dark-cherry;
     outline: none;
+  }
+
+  &__link:active {
+    background-color: $black;
   }
 }
 

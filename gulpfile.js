@@ -27,11 +27,6 @@ const resources = () => {
     .pipe(dest('dist'))
 }
 
-const libs = () => {
-  return src('src/libs/**')
-    .pipe(dest('dist/libs'))
-}
-
 const styles = () => {
   return src('src/css/**/style.css')
     .pipe(sourcemaps.init())
@@ -118,10 +113,9 @@ watch('src/img/svg/**/*.svg', svgSprites)
 watch('src/js/**/*.js', scripts)
 watch('src/resources/normalize.css', normalize)
 watch('src/resources/**', resources)
-watch('src/libs/**', libs)
 
 exports.styles = styles
 exports.scripts = scripts
 exports.htmlMinify = htmlMinify
-exports.default = series(clean, normalize, resources, libs, htmlMinify, scripts, styles, svgSprites, img, webpImages, watchFiles)
-exports.build = series(clean, normalize, resources, libs, svgSprites, img, webpImages, watchFiles)
+exports.default = series(clean, normalize, resources, htmlMinify, scripts, styles, svgSprites, img, webpImages, watchFiles)
+exports.build = series(clean, normalize, resources, svgSprites, img, webpImages, watchFiles)

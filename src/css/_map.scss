@@ -8,16 +8,20 @@
     position: relative;
   }
 
-  &__div {
-    justify-content: space-between;
+  &__list {
+    margin-bottom: 90px;
     padding: 30px 70px;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.06);
   }
 
+  &__div {
+    justify-content: space-between;
+  }
+
   &__item {
     position: relative;
-    width: 300px;
-    margin-right: 120px;
+    width: 177px;
+    margin-right: 197px;
     color: inherit;
   }
 
@@ -26,11 +30,12 @@
     align-items: center;
     text-align: left;
     border: none;
-    width: 300px;
-    padding: 19px 30px;
-    font-weight: 400;
+    padding: 0;
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 600;
     background: none;
-    transition: border 0.2s ease-in-out;
+    transition: border 0.3s;
     cursor: pointer;
   }
 
@@ -41,11 +46,11 @@
   &__item-btn::after {
     content: "";
     display: inline-block;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
-    width: 8px;
-    height: 8px;
-    transform: translate(145px, calc(-50% + 4px)) rotate(45deg);
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    width: 15px;
+    height: 15px;
+    transform: translate(15px, calc(-50% + 4px)) rotate(45deg);
     -webkit-transition: -webkit-transform 0.2s ease;
     transition: -webkit-transform 0.2s ease;
     -o-transition: transform 0.2s ease;
@@ -57,21 +62,14 @@
   }
 
   &__item-btn.is-active::after {
-    transform: translate(145px, 3px) rotate(-135deg);
+    transform: translate(15px, 3px) rotate(-135deg);
   }
 
   &__dropdown {
     display: none;
-    width: 300px;
-    padding-top: 21px;
-    padding-bottom: 23px;
-    padding-left: 28px;
-    padding-right: 100px;
+    margin-top: 20px;
+    padding: 30px 68.5px;
     background-color: $white;
-  }
-
-  &__drop-list {
-    width: 300px;
   }
 
   &__dropdown.is-active {
@@ -94,25 +92,22 @@
   &__drop-list {
     list-style: none;
     padding-left: 0;
-    width: 300px;
-    column-count: 2;
   }
 
   &__dropdown-item:not(:last-child) {
-    margin-bottom: 11px;
+    margin-right: 24px;
   }
 
   &__item-link {
     position: relative;
     flex-shrink: 0;
     display: block;
-    font-size: 16px;
-    line-height: 20.8px;
+    font-size: 18px;
+    line-height: 20px;
     background-size: cover;
     background-position: center;
     background-origin: border-box;
     background-repeat: no-repeat;
-    transition: border-color .3s ease;
   }
 
   &__item-link::before {
@@ -161,11 +156,33 @@
     display: block;
   }
 
+  &__container picture {
+    padding: 0 30px;
+  }
+
   &__photo-1 {
     background-image: url("../img/map__default-all.png");
   }
 
   &__photo-2 {
     background-image: url("../img/map__default-moscow.png");
+  }
+}
+
+@keyframes dropdownOpen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropdownClose {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
